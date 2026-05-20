@@ -1,0 +1,71 @@
+/* Air Botswana Custom Theme Stylesheet */
+
+:root {
+    --primary-blue: #0056b3;
+    --accent-orange: #ff6600;
+    --dark-neutral: #212529;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-neutral);
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page Uniformity & Header/Footer Layout */
+.navbar-brand img {
+    object-fit: contain;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-blue) !important;
+}
+
+.text-accent {
+    color: var(--accent-orange) !important;
+}
+
+.btn-accent {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: #e05500;
+    color: var(--white);
+}
+
+/* Feature & Core Content Layouts */
+.hero-section {
+    background: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200') no-repeat center center/cover;
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.card-feature {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card-feature:hover {
+    transform: translateY(-5px);
+}
+
+/* Main Content Area Pushing Footer Down */
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--dark-neutral);
+    color: var(--white);
+}
