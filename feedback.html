@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Botswana - Flight Inquiries & Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="gallery/image1.jpg" alt="Air Botswana Official Logo Layout" width="50" height="50" class="me-2">
+                    <strong>Air Botswana</strong>
+                </a>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                        <li class="nav-item"><a class="nav-link" href="fleet.html">Our Fleet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="feedback.html">Book & Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="bg-white p-4 p-sm-5 rounded shadow-sm">
+                    <h2 class="text-center h3 mb-4">Flight Inquiry Form</h2>
+                    
+                    <form id="bookingFeedbackForm" class="needs-validation" novalidate>
+                        
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name:</label>
+                            <input type="text" class="form-control" id="fullName" required placeholder="Enter full names">
+                            <div class="invalid-feedback">Please enter your complete structural legal name.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="emailAddr" class="form-label">Email Address:</label>
+                            <input type="email" class="form-control" id="emailAddr" required placeholder="name@example.com">
+                            <div class="invalid-feedback">Please provide a valid diagnostic email address.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="routeSelect" class="form-label">Preferred Route Network:</label>
+                            <select class="form-select" id="routeSelect" required>
+                                <option value="" selected disabled>Choose your route entry...</option>
+                                <option value="GBE-MUB">Gaborone (GBE) to Maun (MUB)</option>
+                                <option value="GBE-FRW">Gaborone (GBE) to Francistown (FRW)</option>
+                                <option value="GBE-JNB">Gaborone (GBE) to Johannesburg (JNB)</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a valid route target.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="feedbackMsg" class="form-label">Additional Requests or Feedback:</label>
+                            <textarea class="form-control" id="feedbackMsg" rows="4" required placeholder="Detail specific travel dependencies or inquiries..."></textarea>
+                            <div class="invalid-feedback">This commentary section cannot remain blank.</div>
+                        </div>
+
+                        <button class="btn btn-accent w-100 py-2 mt-2" type="submit">Submit Details</button>
+                    </form>
+
+                    <div id="formSuccessAlert" class="alert alert-success d-none mt-4" role="alert"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 Air Botswana. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/form-handler.js"></script>
+</body>
+</html>
